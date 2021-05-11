@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Core\Traits;
+namespace Engine\Traits;
 
 trait Singleton
 {
@@ -11,8 +11,10 @@ trait Singleton
 	 */
 	public static function getInstance()
 	{
-		if(!isset(self::$singleton_self))
-			self::$singleton_self = new self();
+		if(!isset(self::$singleton_self) || self::$singleton_self === null)
+		{
+			self::$singleton_self = new static();
+		}
 
 		return self::$singleton_self;
 	}

@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Core\Traits;
+namespace Engine\Traits;
 
 trait Creatable
 {

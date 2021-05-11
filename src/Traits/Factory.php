@@ -1,15 +1,15 @@
 <?php
 
-namespace Engine\Core\Traits;
+namespace Engine\Traits;
 
-trait Factory
+abstract class Factory
 {
-	use \Engine\Core\Traits\Singleton;
+	use \Engine\Traits\Singleton;
 
 	/** @var mixed[] */
 	private array $objects = [];
 
-	public function __construct()
+	public final function __construct()
 	{
 		foreach($this->defineObjects() as $object)
 		{

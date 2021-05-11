@@ -6,13 +6,21 @@
     },
     "autoload": {
         "psr-4": {
-            "Engine\\Core\\": "src/"
+            "Engine\\": "src/"
         }
     },
     "require": {
-
+        "weirweb/engine-page": "@dev",
+        "weirweb/engine-routing": "@dev"
     },
     "repositories": [
-
+        {
+            "type": "path",
+            "url": "../engine-page"
+        },
+        {
+            "type": "path",
+            "url": "../engine-routing"
+        }
     ]
 }
