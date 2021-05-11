@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\Routing;
+namespace Engine\Core\Routing;
 
 abstract class Route
 {
-	use \Core\Traits\Singleton;
+	use \Engine\Core\Traits\Singleton;
 
 	private static string $route;
 
@@ -14,7 +14,7 @@ abstract class Route
 			throw new \LogicException("Route " . static::class . " does not have a defined route");
 	}
 
-	abstract public function getPage() : \Core\Page\Page;
+	abstract public function getPage() : \Engine\Core\Page\Page;
 
 	public function isRouteFor(string $route) : bool
 	{

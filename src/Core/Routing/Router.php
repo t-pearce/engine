@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\Routing;
+namespace Engine\Core\Routing;
 
 class Router
 {
-	use \Core\Traits\Singleton;
+	use \Engine\Core\Traits\Singleton;
 
 	/** @var RouteFactory[] */
 	private array $routeFactories;
@@ -32,7 +32,7 @@ class Router
 		return false;
 	}
 
-	public function route(string $route_string) : ?\Core\Page\Page
+	public function route(string $route_string) : ?\Engine\Core\Page\Page
 	{
 		foreach($this->routeFactories as $factory)
 		{

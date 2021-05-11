@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Util;
+namespace Engine\Core\Util;
 
 class Output
 {

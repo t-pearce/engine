@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\Routing;
+namespace Engine\Core\Routing;
 
 abstract class RouteFactory
 {
-	use \Core\Traits\Factory;
+	use \Engine\Core\Traits\Factory;
 
 	public final function __construct() { }
 

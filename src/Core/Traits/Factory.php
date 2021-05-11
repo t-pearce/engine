@@ -1,10 +1,10 @@
 <?php
 
-namespace Core\Traits;
+namespace Engine\Core\Traits;
 
 trait Factory
 {
-	use \Core\Traits\Singleton;
+	use \Engine\Core\Traits\Singleton;
 
 	/** @var mixed[] */
 	private array $objects = [];

@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Page;
+namespace Engine\Core\Page;
 
 class Page
 {
