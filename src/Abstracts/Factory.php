@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Traits;
+namespace Engine\Abstracts;
 
 abstract class Factory
 {
