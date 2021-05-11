@@ -18,6 +18,19 @@ class Router
 		return $this;
 	}
 
+	/**
+	 * @param RouteFactory[] $factories
+	 */
+	public function addRouteFactories(array $factories) : self
+	{
+		foreach($factories as $factory)
+		{
+			$this->addRouteFactory($factory);
+		}
+
+		return $this;
+	}
+
 	public function canHandleRoute(string $route_string) : bool
 	{
 		foreach($this->routeFactories as $factory)
