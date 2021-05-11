@@ -1,6 +1,7 @@
 {
     "name": "weirweb/engine",
     "description": "Weirweb Engine",
+    "version": "0.1",
     "require-dev": {
         "phpstan/phpstan": "^0.12.81"
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace Engine\Core;
+namespace Engine;
 
 use Engine\Core\Routing\RouteFactory;
 
