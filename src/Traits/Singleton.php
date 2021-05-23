@@ -4,18 +4,18 @@ namespace Engine\Traits;
 
 trait Singleton
 {
-	private static $singleton_self;
-
 	/**
 	 * @return static
 	 */
-	public static function getInstance()
+	final public static function getInstance()
 	{
-		if(!isset(self::$singleton_self) || self::$singleton_self === null)
+		static $instance = null;
+
+		if($instance === null)
 		{
-			self::$singleton_self = new static();
+			$instance = new static();
 		}
 
-		return self::$singleton_self;
+		return $instance;
 	}
 }
