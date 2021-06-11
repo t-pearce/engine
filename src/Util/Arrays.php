@@ -25,17 +25,17 @@ class Arrays
 
 		$product = [];
 
-		foreach($a as $a_val)
+		foreach($a as $aVal)
 		{
-			if(!is_array($a_val))
-				$a_val = [$a_val];
+			if(!is_array($aVal))
+				$aVal = [$aVal];
 
-			foreach($b as $b_val)
+			foreach($b as $bVal)
 			{
-				if(!is_array($b_val))
-					$b_val = [$b_val];
+				if(!is_array($bVal))
+					$bVal = [$bVal];
 
-				$product[] = array_merge($a_val, $b_val);
+				$product[] = array_merge($aVal, $bVal);
 			}
 		}
 

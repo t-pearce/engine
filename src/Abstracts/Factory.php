@@ -7,9 +7,9 @@ abstract class Factory
 	use \Engine\Traits\Singleton;
 
 	/** @var mixed[] */
-	private array $objects = [];
+	protected array $objects = [];
 
-	public final function __construct()
+	public function __construct()
 	{
 		foreach($this->defineObjects() as $object)
 		{
@@ -18,7 +18,7 @@ abstract class Factory
 		}
 	}
 
-	protected function get(string $key) : mixed
+	protected function get(string $key)
 	{
 		if(!$this->hasKey($key))
 			return null;
@@ -31,7 +31,7 @@ abstract class Factory
 	 */
 	protected function getAll() : array
 	{
-		return $this->objects;
+		return array_values($this->objects);
 	}
 
 	protected function hasKey(string $key) : bool

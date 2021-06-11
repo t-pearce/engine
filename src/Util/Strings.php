@@ -8,4 +8,9 @@ class Strings
 	{
 		return strpos($haystack, $needle) !== false;
 	}
+
+	public static function snakeCaseToHumanReadable($string) : string
+	{
+		return ucfirst(str_replace('_', ' ', $string));
+	}
 }
