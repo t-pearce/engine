@@ -41,4 +41,22 @@ class Arrays
 
 		return $product;
 	}
+
+	public static function isAssoc(array $arr)
+	{
+		if([] === $arr)
+			return false;
+
+		// If there are string keys, it's associative
+		if(count(array_filter(array_keys($arr), 'is_string')) > 0)
+			return true;
+
+		$keys = array_keys($arr);
+
+		sort($keys);
+
+		// If the sorted keys are equal to the integer range from 0 to before the length of the array
+		// it's considered numeric.
+		return $keys != range(0, count($keys) - 1);
+	}
 }

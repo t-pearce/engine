@@ -34,6 +34,11 @@ abstract class Factory
 		return array_values($this->objects);
 	}
 
+	public function countAll() : int
+	{
+		return count($this->objects);
+	}
+
 	protected function hasKey(string $key) : bool
 	{
 		foreach($this->objects as $k => $object)
