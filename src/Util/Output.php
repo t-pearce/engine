@@ -7,7 +7,7 @@ class Output
 	public static function print($element) : void
 	{
 		print_r("<pre>");
-		print_r($element);
+		var_dump($element);
 		print_r("</pre>");
 	}
 
