@@ -51,4 +51,6 @@ abstract class Factory
 	}
 
 	abstract protected function defineObjects() : array;
+	
+	protected function postDefintion() : void {}
 }
