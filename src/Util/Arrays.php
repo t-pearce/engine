@@ -42,6 +42,35 @@ class Arrays
 		return $product;
 	}
 
+	public static function combinations(array $array, int $size)
+	{
+		if($size === 1)
+		{
+			$result = [];
+
+			foreach($array as $val)
+				$result[] = [$val];
+
+			return $result;
+		}
+
+		$subcombo = self::combinations($array, $size - 1);
+		$result   = [];
+
+		foreach($subcombo as $combination)
+		{
+			foreach($array as $val)
+			{
+				if(in_array($val, $combination))
+					continue;
+
+				$result[] = [...$combination, $val];
+			}
+		}
+
+		return $result;
+	}
+
 	public static function isAssoc(array $arr)
 	{
 		if([] === $arr)

@@ -31,7 +31,7 @@ abstract class Enum
 		if(!static::isConstantValue($value))
 			throw new \LogicException("Given value {$value} is not a valid constant value");
 
-		return substr($value, strlen(static::PREFIX));
+		return $value;
 	}
 
 	public function addPrefix(string $value) : string
