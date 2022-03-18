@@ -2,14 +2,9 @@
 
 namespace Engine;
 
-class ConfigProvider
+abstract class ConfigProvider
 {
-	public function get($key)
-	{
-		switch($key)
-		{
-			case \Engine\Config::PAGE_DEFAULT_TEMPLATE:
-				// return \PtuDex\Routing\Template::getInstance();
-		}
-	}
+	use \Engine\Traits\Creatable;
+
+	abstract public function get(string $key);
 }

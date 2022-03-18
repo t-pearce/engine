@@ -2,8 +2,8 @@
 
 namespace Engine;
 
-class Config
+enum Config : string
 {
-	const HOST                  = "engine.host";
-	const PAGE_DEFAULT_TEMPLATE = "engine.page.defaultTemplate";
+	case HOST                  = "engine.host";
+	case PAGE_DEFAULT_TEMPLATE = "engine.pageDefaultTemplate";
 }
