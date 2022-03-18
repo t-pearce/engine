@@ -9,7 +9,7 @@ class ConfigProvider
 		switch($key)
 		{
 			case \Engine\Config::PAGE_DEFAULT_TEMPLATE:
-				return \PtuDex\Routing\Template::getInstance();
+				// return \PtuDex\Routing\Template::getInstance();
 		}
 	}
 }
