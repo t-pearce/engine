@@ -4,6 +4,7 @@ namespace Engine;
 
 class ConfigManager
 {
+	/** @var array<ConfigProvider> */
 	private array $configProviders = [];
 
 	use \Engine\Traits\Singleton;

@@ -2,12 +2,12 @@
 
 namespace Engine\Util;
 
-class LogicalOperators
+enum LogicalOperators : string
 {
-	const OR = "or";
-	const AND = "and";
-	const NOR = "nor";
-	const NAND = "nand";
-	const XOR = "xor";
-	const NXOR = "nxor"; // Biconditional
+	case OR = "or";
+	case AND = "and";
+	case NOR = "nor";
+	case NAND = "nand";
+	case XOR = "xor";
+	case NXOR = "nxor"; // Biconditional
 }

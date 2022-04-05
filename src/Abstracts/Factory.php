@@ -4,8 +4,6 @@ namespace Engine\Abstracts;
 
 abstract class Factory
 {
-	use \Engine\Traits\Singleton;
-
 	/** @var mixed[] */
 	protected array $objects = [];
 
@@ -13,12 +11,13 @@ abstract class Factory
 	{
 		foreach($this->defineObjects() as $object)
 		{
-			$reflection = new \ReflectionClass($object);
-			$this->objects[$reflection->getName()] = $object;
+			var_dump($object);
+			$this->objects[$this->getIdentifier($object)] = $object;
 		}
+		die;
 	}
 
-	protected function get(string $key)
+	protected function get($key)
 	{
 		if(!$this->hasKey($key))
 			return null;
@@ -26,9 +25,7 @@ abstract class Factory
 		return $this->objects[$key];
 	}
 
-	/**
-	 * @return mixed[]
-	 */
+	/** @return mixed[] */
 	protected function getAll() : array
 	{
 		return array_values($this->objects);
@@ -39,7 +36,7 @@ abstract class Factory
 		return count($this->objects);
 	}
 
-	protected function hasKey(string $key) : bool
+	protected function hasKey($key) : bool
 	{
 		foreach($this->objects as $k => $object)
 		{
@@ -48,6 +45,13 @@ abstract class Factory
 		}
 
 		return false;
+	}
+
+	protected function getIdentifier($object)
+	{
+		$reflection = new \ReflectionClass($object);
+
+		return $reflection->getName();
 	}
 
 	abstract protected function defineObjects() : array;

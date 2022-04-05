@@ -6,5 +6,5 @@ abstract class ConfigProvider
 {
 	use \Engine\Traits\Creatable;
 
-	abstract public function get(string $key);
+	abstract public function get(ConfigInterface $key);
 }
