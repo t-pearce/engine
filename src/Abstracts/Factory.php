@@ -11,10 +11,8 @@ abstract class Factory
 	{
 		foreach($this->defineObjects() as $object)
 		{
-			var_dump($object);
 			$this->objects[$this->getIdentifier($object)] = $object;
 		}
-		die;
 	}
 
 	protected function get($key)
